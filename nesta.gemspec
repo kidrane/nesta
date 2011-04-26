@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "nesta/version"
 
 Gem::Specification.new do |s|
-  s.name        = "nesta"
+  s.name        = "mars-nesta"
   s.version     = Nesta::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Graham Ashton"]
@@ -24,7 +24,7 @@ Implementing your site's design is easy, but Nesta also has a small
 selection of themes to choose from.
 EOF
 
-  s.rubyforge_project = "nesta"
+# s.rubyforge_project = "nesta"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
