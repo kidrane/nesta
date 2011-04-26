@@ -1,8 +1,13 @@
 require "time"
 
 require "rubygems"
-require "maruku"
 require "redcloth"
+begin
+  require "redcarpet"
+  Maruku = Redcarpet
+rescue LoadError
+  require "maruku" 
+end
 
 module Nesta
   class FileModel
