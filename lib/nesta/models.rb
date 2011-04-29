@@ -2,6 +2,7 @@ require "time"
 
 require "rubygems"
 require "redcloth"
+require "coderay"
 begin
   require "redcarpet"
   Maruku = Redcarpet
@@ -93,11 +94,17 @@ module Nesta
     def to_html(scope = nil)
       case @format
       when :mdown
-        Maruku.new(markup).to_html
+        Maruku.new(coderay(markup)).to_html
       when :haml
         Haml::Engine.new(markup).to_html(scope || Object.new)
       when :textile
         RedCloth.new(markup).to_html
+      end
+    end
+
+    def coderay(text)
+      text.gsub(/^```\s(\w+?)\s+?(^.*?)^```/m) do
+        CodeRay.scan($2, $1).div(:css => :class)
       end
     end
 
