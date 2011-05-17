@@ -1,6 +1,7 @@
 @import "mixins.sass"
 @import "colors.sass"
 
+
 // Variables
 
 $content-width: 37em
@@ -173,11 +174,9 @@ article
     max-width: 100%
     margin-bottom: $base-vertical-margin
 
-  code,
   pre
     background-color: $tint
-  code
-    padding: 1px 3px
+
   pre
     border-left: $border-style
     background-color: $tint
@@ -244,3 +243,5 @@ nav.categories
 
 div.feed
   margin: $base-vertical-margin 0
+
+@import "coderay.scss"

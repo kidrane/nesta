@@ -3,11 +3,11 @@ $:.push File.expand_path("../lib", __FILE__)
 require "nesta/version"
 
 Gem::Specification.new do |s|
-  s.name        = "nesta"
+  s.name        = "mars-nesta"
   s.version     = Nesta::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Graham Ashton"]
-  s.email       = ["graham@effectif.com"]
+  s.authors     = ["Graham Ashton", "Mars Cheng"]
+  s.email       = ["graham@effectif.com", "kidrane@gmail.com"]
   s.homepage    = "http://nestacms.com"
   s.summary     = %q{Ruby CMS, written in Sinatra}
   s.description = <<-EOF
@@ -24,7 +24,7 @@ Implementing your site's design is easy, but Nesta also has a small
 selection of themes to choose from.
 EOF
 
-  s.rubyforge_project = "nesta"
+# s.rubyforge_project = "nesta"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -32,9 +32,10 @@ EOF
   s.require_paths = ["lib"]
 
   s.add_dependency('haml', '~> 3.0')
-  s.add_dependency('maruku', '>= 0.6.0')
+  s.add_dependency('redcarpet', '>= 1.11.0')
   s.add_dependency('RedCloth', '~> 4.2')
   s.add_dependency('sinatra', '1.1.2')
+  s.add_dependency('coderay', '>= 0.9.7')
   
   # Useful in development
   s.add_dependency('shotgun', '>= 0.8')
