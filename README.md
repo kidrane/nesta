@@ -15,7 +15,7 @@ your editor. Publish by pushing to a git repository.
 
 Begin by installing the gem:
 
-    $ gem install nesta
+    $ gem install mars-nesta
 
 Then use the `nesta` command to generate a new site:
 
